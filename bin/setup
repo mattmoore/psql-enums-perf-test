@@ -1,0 +1,5 @@
+sudo -u postgres psql -c "CREATE EXTENSION IF NOT EXISTS pgtap"
+sudo -u postgres psql -c "DROP DATABASE IF EXISTS enums_test"
+sudo -u postgres psql -c "CREATE DATABASE enums_test"
+sudo -u postgres psql -d enums_test -f db/schema.sql
+sudo -u postgres psql -d enums_test -f db/seed.sql
